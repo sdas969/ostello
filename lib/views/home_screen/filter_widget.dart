@@ -1,14 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:ostello/constants.dart';
+import 'package:ostello/universal/custom_chip_widget.dart';
+import 'package:ostello/views/home_screen/filter_content_widget.dart';
 
 class FilterWidget extends StatelessWidget {
   const FilterWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Row(
-        children: [],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => SingleChildScrollView(
+          child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 17.0),
+        child: Row(
+            children: List.generate(
+                filterList.length,
+                (index) => Padding(
+                    padding: EdgeInsets.only(
+                        left: index == 0 ? 12 : 6.0,
+                        right: index == filterList.length - 1 ? 12 : 6),
+                    child: CustomChipWidget(
+                        onTap: () {
+                          showModalBottomSheet(
+                              useSafeArea: true,
+                              isScrollControlled: true,
+                              showDragHandle: true,
+                              context: context,
+                              builder: (context) => const FilterContent());
+                        },
+                        borderWidth: 2,
+                        textColor: const Color(0xff8C8C8C),
+                        borderColor: const Color(0xff8C8C8C),
+                        label: filterList[index].name,
+                        icon: filterList[index].icon)))),
+      ));
 }
