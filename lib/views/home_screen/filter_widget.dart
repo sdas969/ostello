@@ -8,7 +8,8 @@ class FilterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
-          child: Padding(
+      scrollDirection: Axis.horizontal,
+      child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 17.0),
         child: Row(
             children: List.generate(
@@ -20,9 +21,12 @@ class FilterWidget extends StatelessWidget {
                     child: CustomChipWidget(
                         onTap: () {
                           showModalBottomSheet(
+                              clipBehavior: Clip.antiAliasWithSaveLayer,
+                              shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.vertical(
+                                      top: Radius.circular(30))),
                               useSafeArea: true,
                               isScrollControlled: true,
-                              showDragHandle: true,
                               context: context,
                               builder: (context) => const FilterContent());
                         },

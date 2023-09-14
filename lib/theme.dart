@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const appTextStyle = TextStyle(fontFamily: "AvenirNextLT", color: Colors.black);
+const appTextStyle = TextStyle(color: Colors.black);
 const textTheme = TextTheme(
     titleLarge: appTextStyle,
     titleMedium: appTextStyle,
@@ -14,7 +14,8 @@ const textTheme = TextTheme(
     bodyLarge: appTextStyle,
     bodyMedium: appTextStyle,
     bodySmall: appTextStyle);
-ThemeData appThemeData = ThemeData.light().copyWith(
+ThemeData appThemeData = ThemeData(
+    fontFamily: "AvenirNextLT",
     textTheme: textTheme,
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
     useMaterial3: true);

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ostello/universal/custom_divider.dart';
+import 'package:ostello/universal/custom_drag_handle.dart';
 import 'package:ostello/universal/custom_text_field.dart';
 
 class AddressBottomSheet extends StatelessWidget {
@@ -16,6 +17,8 @@ class AddressBottomSheet extends StatelessWidget {
       expand: false,
       builder: (context, controller) =>
           Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            const SizedBox(height: 10),
+            const CustomDragHandle(),
             const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 26, vertical: 17),
                 child: Text("Enter address details",

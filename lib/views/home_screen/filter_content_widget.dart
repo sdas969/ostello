@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ostello/constants.dart';
+import 'package:ostello/universal/colored_button.dart';
+import 'package:ostello/universal/custom_drag_handle.dart';
+import 'package:ostello/universal/transparent_button.dart';
 import 'package:ostello/views/home_screen/filter_section_card.dart';
 
 class FilterContent extends StatelessWidget {
@@ -17,9 +20,14 @@ class FilterContent extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 26, vertical: 18),
                   color: Colors.white,
-                  child: const Text("Filters",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w800, fontSize: 22))),
+                  child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomDragHandle(),
+                        Text("Filters",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w800, fontSize: 22))
+                      ])),
               Expanded(
                   child: SingleChildScrollView(
                       controller: controller,
@@ -30,27 +38,15 @@ class FilterContent extends StatelessWidget {
                               (index) => FilterSectionCard(
                                   name: filterSectionList[index].name,
                                   tags: filterSectionList[index].tagList))))),
-              Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 18.0, horizontal: 16),
+              const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 16),
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        TextButton(
-                            onPressed: () {},
-                            child: const Text("Clear Filters")),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: MaterialButton(
-                            onPressed: () {},
-                            textColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            color: const Color(0xff7D23E0),
-                            child: const Text("Apply"),
-                          ),
-                        )
+                        TransparentButton(text: "Clear Filters"),
+                        SizedBox(width: 10),
+                        Expanded(child: ColoredButton(text: "Apply"))
                       ]))
             ]));
   }
