@@ -28,6 +28,7 @@ class RecentSearchesWidget extends StatelessWidget {
               const SizedBox(height: 18),
               Wrap(
                   spacing: 11,
+                  runSpacing: 11,
                   children: List.generate(
                       recentSearches.length,
                       (index) =>

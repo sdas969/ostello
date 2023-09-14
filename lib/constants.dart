@@ -1,3 +1,4 @@
+import 'package:ostello/models/category_model.dart';
 import 'package:ostello/models/institute_model.dart';
 
 final instituteList = [
@@ -30,4 +31,10 @@ final instituteList = [
 const List<String> recentSearches = [
   "Medical coaching",
   "Medical entrance exams"
+];
+
+List<CategoryModel> categoryList = [
+  CategoryModel(name: "Academy", imgURL: "assets/images/academy.png"),
+  CategoryModel(name: "Skills", imgURL: "assets/images/skills.png"),
+  CategoryModel(name: "Study Abroad", imgURL: "assets/images/abroad.png"),
 ];
