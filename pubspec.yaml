@@ -80,6 +80,21 @@ flutter:
     - family: AvenirNextLT
       fonts:
         - asset: assets/fonts/AvenirNextLTPro-Regular.otf
+    - family: MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
+    - family: MyFlutterApp_1
+      fonts:
+        - asset: assets/fonts/MyFlutterApp_1.ttf
+    - family: MyFlutterApp_2
+      fonts:
+        - asset: assets/fonts/MyFlutterApp_2.ttf
+    - family: MyFlutterApp_3
+      fonts:
+        - asset: assets/fonts/MyFlutterApp_3.ttf
+    - family: MyFlutterApp_4
+      fonts:
+        - asset: assets/fonts/MyFlutterApp_4.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

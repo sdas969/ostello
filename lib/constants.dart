@@ -117,3 +117,16 @@ List<FilterSectionModel> filterSectionList = [
     "Undergraduate"
   ])
 ];
+
+const _kFontFam = 'MyFlutterApp';
+const String? _kFontPkg = null;
+const IconData icon7 =
+    IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+const IconData icon6 =
+    IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+const IconData icon5 =
+    IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+const IconData icon4 =
+    IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+const IconData icon3 =
+    IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
